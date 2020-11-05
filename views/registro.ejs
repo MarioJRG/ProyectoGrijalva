@@ -1,0 +1,28 @@
+<%-include('partials/_header.ejs') -%>
+<form action="/add" method="POST">
+      
+    <h1>Registro</h1>
+    
+    <fieldset>
+      <legend><span class="number">*</span>Informacion Basica<span class="number">*</span></legend>
+      <label for="nombre">Nombre:</label>
+      <input type="text"  name="nombre">
+
+      <label for="apellidos">Apellidos:</label>
+      <input type="text"  name="apellidos">
+      
+      <label for="correo">Email:</label>
+      <input type="email" name="correo">
+      
+      <label for="password">Password:</label>
+      <input type="password"  name="password">
+      
+      
+    </fieldset>
+    
+  
+    <button type="submit">Guardar</button>
+  </form>
+  
+</body>
+<%-include('partials/_footer.ejs') -%>
