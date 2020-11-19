@@ -1,9 +1,9 @@
 const express = require('express');
-const forController=require('../controller/formularioController');
+const forFormulario=require('../controller/formularioController');
 const router = express.Router();
 
 
-router.get('/',forController.list);
-router.post('/add',forController.add);
+router.get('/',forFormulario.list);
+router.post('/add',forFormulario.save);
 
 module.exports = router;

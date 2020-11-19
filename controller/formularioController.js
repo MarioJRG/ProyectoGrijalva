@@ -1,26 +1,28 @@
-const forController = {};
+const forformulario = {};
+const mongoose = require('mongoose');
+const db = require('../db');
 
-forController.list= (req,res)=>{ 
+var formulario = require('../models/formulario.model');
+forformulario.list= (req,res)=>{ 
 
     res.render('registro')
 
    
 };
-
-forController.add = (req, res)=>{
-    const user = req.body;
-    
-    req.getConnection((err, conn)=>{
-        
-        const query = 'INSERT INTO datos SET ?';
-        conn.query(query,[user],(error, data)=>{
-            
-            console.log(data);
-            res.redirect('/'); 
-        })
-
+forformulario.save= (req,res)=>{
+    var newformulario = formulario({
+        nombre:req.body.nombre,
+        apellidos:req.body.apellidos,
+        correo:req.body.correo,
+        password:req.body.password
     });
 
-};
+    newformulario.save((err,formulariosaved)=>{
+        if(err) console.log(err);
+        console.log('Guardado con Exito. ',formulariosaved);
+        res.redirect('/')
+    })
+}
 
-module.exports= forController;
+
+module.exports= forformulario;
