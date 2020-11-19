@@ -1,38 +1,22 @@
 const express = require('express');
-const mysql = require('mysql');
-const myConn = require('express-myconnection');
+const mongoose = require('mongoose');
 const path = require('path');
 
 const app = express();
+const port = 3000;
 
-//importar rutas
-const userFor = require('./routes/formulario');
-const { urlencoded } = require('express');
+const db = require('./db');
+const balanceRoutes = require('./routes/formulario');
+//configuracion de express
+app.use(express.urlencoded( { extended:false }))
+app.use(express.json())
 
-//Configuracion
-app.set('port',process.env.PORT || 3000);
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname,'views'));
+app.set('view engine','ejs');
+app.set('views',path.join(__dirname,'views'));
 
-
-//Base de datos
-app.use(myConn(mysql,{
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'users',
-    port: 3306
-}, 'single'));
-
-app.use(express.urlencoded({extended: false}));
-
-//Rutas
-app.use('/',userFor);
-
-
-//Archivos Estaticos
+//routes
+app.use('/',balanceRoutes);
+//estaticos
 app.use(express.static(path.join(__dirname,'public')));
 
-
-//app.get('/', (req, res) => res.send('Hello World!'))
-app.listen(app.get('port'), () => console.log(`Example app listening on port port!`))
+app.listen(port, ()=> console.log(`El servidor iniciado en el pueto ${port}`))
