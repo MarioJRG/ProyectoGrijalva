@@ -5,7 +5,7 @@ const db = require('../db');
 var formulario = require('../models/formulario.model');
 forformulario.list= (req,res)=>{ 
 
-    res.render('registro')
+    res.render('formulario')
 
    
 };
@@ -16,11 +16,17 @@ forformulario.save= (req,res)=>{
         correo:req.body.correo,
         password:req.body.password
     });
-
+    
     newformulario.save((err,formulariosaved)=>{
-        if(err) console.log(err);
+        if(err) {
+            console.log(err);
+            req.flash('success','Usuario no agregado')
+        }else{
         console.log('Guardado con Exito. ',formulariosaved);
-        res.redirect('/')
+        req.flash('success','usuario agregado');
+        
+        }
+        res.redirect('/registro')
     })
 }
 
