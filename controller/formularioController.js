@@ -20,7 +20,7 @@ forformulario.save= (req,res)=>{
     newformulario.save((err,formulariosaved)=>{
         if(err) {
             console.log(err);
-            req.flash('success','Usuario no agregado')
+            req.flash('success','Usuario no agregado');
         }else{
         console.log('Guardado con Exito. ',formulariosaved);
         req.flash('success','usuario agregado');

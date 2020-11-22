@@ -4,7 +4,7 @@ const path = require('path');
 const flash = require('connect-flash');
 const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
-
+const bcrypt = require('bcrypt');
 const app = express();
 const port = 3000;
 
@@ -29,6 +29,7 @@ app.use(express.json())
 app.use((req, res, next)=>{
     
    res.locals.success= req.flash('success');
+ 
     
     next();
 });

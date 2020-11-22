@@ -8,6 +8,6 @@ const forLogin=require('../controller/loginController');
 router.post('/add',forFormulario.save);
 router.get('/registro',forLogin.register);
 router.get('/',forLogin.list);
-
+router.post('/login',forLogin.authenticate);
 
 module.exports = router;
