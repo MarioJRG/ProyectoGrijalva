@@ -1,11 +1,12 @@
 <%-include('partials/_header.ejs') -%>
-<%if(success){
+<%if(error){
   %>
   <div class="container p-4">
     <div class="row">
         <div class="col-md-4 mx-auto">
             <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <p><%= success%></p>
+                <p><%= error%></p>
+                
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -40,4 +41,5 @@
     <a href="/registro" class="boton_personalizado" style="text-align: center; display: inline-block; width: 100%;"  > Regitro  </a>
   </form>
   
-<%-include('partials/_footer.ejs') -%>
+
+  <%-include('partials/_footer.ejs') -%>

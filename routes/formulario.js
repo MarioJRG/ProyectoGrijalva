@@ -7,7 +7,8 @@ const forLogin=require('../controller/loginController');
 //router.get('/',forFormulario.list);
 router.post('/add',forFormulario.save);
 router.get('/registro',forLogin.register);
-router.get('/',forLogin.list);
-router.post('/login',forLogin.authenticate);
+//router.get('/',forLogin.list);
+//router.get('/principal',forLogin.principal)
+//router.post('/login',forLogin.authenticate);
 
 module.exports = router;
