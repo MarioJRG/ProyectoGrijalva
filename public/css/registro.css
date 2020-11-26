@@ -123,7 +123,12 @@
     text-shadow: 0 1px 0 rgba(255,255,255,0.2);
     border-radius: 100%;
   }
-  
+  .boton_agregar{
+    display: flex;
+    justify-content: center;
+    
+    margin-right:auto;
+  }
   @media screen and (min-width: 480px) {
   
     form {

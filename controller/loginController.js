@@ -19,6 +19,10 @@ forlogin.list= (req,res)=>{
 
    
 };
+forlogin.logout=(req,res)=>{
+    req.logout();
+    res.redirect("/");
+}
 
 
 

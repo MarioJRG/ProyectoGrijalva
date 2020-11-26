@@ -9,7 +9,7 @@ const passport = require('passport');
 const cookieParser = require('cookie-Parser');
 const passportLocal = require('passport-local').Strategy;
 var login = require('./models/formulario.model');
-
+var  Dieta = require('./models/dieta.model');
 
 const app = express();
 const port = 3000;
@@ -71,7 +71,7 @@ app.use((req, res, next)=>{
     
    res.locals.success= req.flash('success');
    res.locals.error= req.flash('error');
- 
+   res.locals.user = req.user || null;
     
     next();
 });
@@ -82,12 +82,20 @@ app.set('views',path.join(__dirname,'views'));
 //routes
 app.get('/principal',(req,res,next)=>{
     if(req.isAuthenticated()){
+
         return next();
     }
     res.redirect('/');
 }
 ,(req,res)=>{
-    res.render('principal')
+    Dieta.find({usuario:req.user._id},(err,dietas)=>{
+        if(err)console.log('Error: '+err)
+        res.render('principal',{
+            dieta:dietas
+        });
+        
+    })
+    //res.render('principal')
 })
 
 app.get('/',(req,res,next) =>{
@@ -95,7 +103,7 @@ if(req.isAuthenticated()){
     res.redirect('/principal');
 }
 res.render('login');
-})
+})  
 app.post('/login',passport.authenticate('local',{
     successRedirect:"/principal",
     failureRedirect:"/",
