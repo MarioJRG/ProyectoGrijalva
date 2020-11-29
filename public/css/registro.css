@@ -3,6 +3,60 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
+  #logo {
+    position: center;
+    width: 100%;
+    height: -10px;
+  } 
+   #Pumpkin_Button {
+    width: 100%;
+  }   
+  #Pink_Button {
+    width: 100%;
+
+  }  
+
+  #txtbars{
+    color: #6e8f60;
+    font-size: 14px;
+    font-family: Segoe UI;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+  }
+  #botones-inicio {
+    margin-top: 8%;
+    position: relative;
+    width: 100%;
+    top: 50%;
+  }
+
+  #pumpkin{
+    background-color: #FFC573;
+    color: white;
+
+  }
+  #rosa{
+  background-color: #F9C7BB;
+  color: white;
+  }
+
+
+	#VIVIR_SALUDABLE {
+		opacity: 0.735;
+		position: center;
+		width: 100%;
+		height: 30px;
+		text-align: center;
+		font-family: Basic Sans;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(110,143,96,1);
+    letter-spacing: 2.2px;
+  }
+  #contenedorcard{
+    
+  }
   
   body {
     font-family: 'Nunito', sans-serif;
@@ -13,7 +67,6 @@
     max-width: 300px;
     margin: 10px auto;
     padding: 10px 20px;
-    background: #f4f7f8;
     border-radius: 8px;
   }
   
@@ -21,6 +74,61 @@
     margin: 0 0 30px 0;
     text-align: center;
   }
+  @media screen and (max-height: 830px){
+    #logo{
+      margin-top: -20px;
+      height: 40px;
+    }
+    #VIVIR_SALUDABLE{
+      margin-top: -20px;
+    }
+
+    #pumpkin{
+      height: 40px;
+      
+    }
+    #rosa{
+      height: 40px;
+      
+    }
+
+    form{
+      margin-top: -20px;
+    }
+    .card{
+      border: none;
+      background: none;
+      margin-left: 25%;
+      margin-right: 25%;
+      width: 50%;
+    }
+    
+    .ingresar{
+      height: 40px;
+      line-height: 5px;
+      font-weight: 100;
+      background-color: #C2DEAE;
+      border: none;
+      padding: 7.5px 25px;
+      width: 100%;
+      text-align: center;
+      font-weight: 100;
+    }
+
+  }
+  .ingresar{
+    background-color: #C2DEAE;
+    border: none;
+    padding: 15px 50px;
+    width: 100%;
+    text-align: center;
+    font-family: Segoe UI;
+    letter-spacing: 0.2em;
+    font-size: 16px;
+    font-weight: 400;
+    color: #6e8f60;
+  }
+  
   .boton_personalizado{
     
     padding: 19px 39px 18px 39px;
