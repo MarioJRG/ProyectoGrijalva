@@ -102,7 +102,7 @@ app.get('/',(req,res,next) =>{
 if(req.isAuthenticated()){
     res.redirect('/principal');
 }
-res.render('login');
+res.render('inicio');
 })  
 app.post('/login',passport.authenticate('local',{
     successRedirect:"/principal",

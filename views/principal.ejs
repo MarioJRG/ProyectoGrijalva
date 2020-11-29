@@ -1,11 +1,21 @@
 <%-include('partials/_header.ejs') -%>
-<h1>Datos</h1>
+<style>
+  body {
+    background-color: #FEFDE9;
+    background-image: url('css/imagenes/herbs-recipes.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+</style>
+<div id=#contenedorcard class="container p-4">
 <%
 if(dieta){
 
     dieta.forEach(die=>{
     if(die.eliminado == 1){
-%>      
+%>
 <div class="card">
     <div class="card-body">
          <p class="card-text">Comida: <%= die.comida %></p>
@@ -58,6 +68,7 @@ if(dieta){
     });
 }
 %>
+</div>
 
 
 
