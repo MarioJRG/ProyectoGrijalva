@@ -21,12 +21,13 @@ forformulario.save= (req,res)=>{
         if(err) {
             console.log(err);
             req.flash('success','Usuario no agregado');
+            res.redirect('/registro')
         }else{
         console.log('Guardado con Exito. ',formulariosaved);
         req.flash('success','usuario agregado');
-        
+        res.redirect('/')
         }
-        res.redirect('/registro')
+        
     })
 }
 
