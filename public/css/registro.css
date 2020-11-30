@@ -3,7 +3,92 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
-  
+  #logo {
+    position: center;
+    width: 100%;
+    height: -10px;
+  } 
+   #Pumpkin_Button {
+    width: 100%;
+  }   
+  #Pink_Button {
+    width: 100%;
+
+  }  
+
+  #txtbars{
+    color: #6e8f60;
+    font-size: 14px;
+    font-family: Segoe UI;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+  }
+  #botones-inicio {
+    margin-top: 8%;
+    position: relative;
+    width: 100%;
+    top: 50%;
+  }
+
+  #pumpkin{
+    background-color: #FFC573;
+    color: white;
+    border: none;
+
+  }
+  #rosa{
+  background-color: #F9C7BB;
+  color: white;
+  border: none;
+  }
+
+
+	#VIVIR_SALUDABLE {
+		opacity: 0.735;
+		position: center;
+		width: 100%;
+		height: 30px;
+		text-align: center;
+		font-family: Basic Sans;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		color: rgba(110,143,96,1);
+    letter-spacing: 2.2px;
+  }
+  #contenedorcard{
+    margin-top: 10%;
+    
+  }
+  .modal-content{
+    background-color: #fefde9 !important;
+  }
+  .column{
+    margin: auto;
+    width: 50%;
+    position: center;
+    height: 400px;
+    overflow-y: auto;
+    overflow-x:hidden;
+  }
+
+  .card {
+    /*float: left;*/
+    background-color: transparent !important;
+    border: none !important;
+    width: 100%;
+    padding: .75rem;
+    margin-bottom: 1rem;
+    border: 0;
+    flex-basis: 33.333%;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  .card-text{
+    font-family: Yrsa !important;
+    color: #6C7B6B !important;
+  }
+
   body {
     font-family: 'Nunito', sans-serif;
     color: #384047;
@@ -13,13 +98,112 @@
     max-width: 300px;
     margin: 10px auto;
     padding: 10px 20px;
-    background: #f4f7f8;
     border-radius: 8px;
   }
   
   h1 {
     margin: 0 0 30px 0;
     text-align: center;
+  }
+  @media screen and (max-height: 830px){
+    #logo{
+      margin-top: -20px;
+      height: 40px;
+    }
+    #VIVIR_SALUDABLE{
+      margin-top: -20px;
+    }
+
+    #pumpkin{
+      height: 40px;
+      
+    }
+    #contenedorcard
+    {
+      margin-top: 0%;
+
+    }
+    #rosa{
+      height: 40px;
+    }
+
+    form{
+      margin-top: -20px;
+    }
+    .card{
+      width: max-content;
+    }
+    .btnprincpial{
+      height: 30px;
+      font-weight: 100;
+      background-color: #C2DEAE;
+      border: none;
+      line-height: 1px !important;
+      padding: 7.5px 25px;
+      width: 50% !important;
+      font-size: 10px !important;
+      text-align: center;
+      font-weight: 100;
+      margin-bottom: -10%;
+    }
+
+
+    .ingresar{
+      height: 40px;
+      line-height: 5px;
+      font-weight: 100;
+      background-color: #C2DEAE;
+      border: none;
+      padding: 7.5px 25px;
+      width: 100%;
+      text-align: center;
+      font-weight: 100;
+    }
+
+  }
+  .navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+  .ingresar{
+    background-color: #C2DEAE;
+    border: none;
+    padding: 15px 50px;
+    width: 100%;
+    text-align: center;
+    font-family: Segoe UI;
+    letter-spacing: 0.2em;
+    font-size: 16px;
+    font-weight: 400;
+    color: #6e8f60;
+  }
+  .btnprincpial{
+    background-color: #C2DEAE;
+    border: none;
+    margin-top: 6%;
+    padding: 15px 50px;
+    width: 30%;
+    text-align: center;
+    font-family: Segoe UI;
+    letter-spacing: 0.2em;
+    font-size: 16px;
+    font-weight: 400;
+    color: #6e8f60;
+  }
+    .btnlgout{
+    background-color: #FFC573;
+    border: none;
+    margin-left: 80%;
+    margin-top: 6%;
+    padding: 15px 50px;
+    max-width: 40%;
+    text-align: center;
+    font-family: Segoe UI;
+    letter-spacing: 0.2em;
+    font-size: 16px;
+    font-weight: 400;
+    color: #6e8f60;
   }
   .boton_personalizado{
     
