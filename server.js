@@ -98,7 +98,7 @@ app.use('/',balanceRoutes);
         
     //})
     //res.render('principal')
-})
+//})
 
 //app.get('/',(req,res,next) =>{
 //if(req.isAuthenticated()){
