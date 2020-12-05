@@ -9,15 +9,15 @@ const bcrypt = require('bcryptjs');
 const passport = require('passport');
 const cookieParser = require('cookie-Parser');
 const passportLocal = require('passport-local').Strategy;
-var login = require('../models/formulario.model');
-var  Dieta = require('../models/dieta.model');
+var login = require('./models/formulario.model');
+var  Dieta = require('./models/dieta.model');
 
 const app = express();
 const port = process.env.PORT || 8080;
 
 
 const db = require('./db');
-const balanceRoutes = require('../routes/formulario');
+const balanceRoutes = require('./routes/formulario');
 
 //middlewares
 
