@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const path = require('path');
 const flash = require('connect-flash');
 const session = require('express-session');
+
 const MongoStore = require('connect-mongo')(session);
 const bcrypt = require('bcrypt');
 const passport = require('passport');
