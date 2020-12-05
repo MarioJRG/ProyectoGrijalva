@@ -5,7 +5,7 @@ const flash = require('connect-flash');
 const session = require('express-session');
 
 const MongoStore = require('connect-mongo')(session);
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const passport = require('passport');
 const cookieParser = require('cookie-Parser');
 const passportLocal = require('passport-local').Strategy;
