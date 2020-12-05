@@ -106,11 +106,11 @@ app.get('/principal',(req,res,next)=>{
 //}
 //res.render('inicio');
 //})  
-app.post('/login',passport.authenticate('local',{
-    successRedirect:"/principal",
-    failureRedirect:"/",
-    failureFlash:true
-}));
+//app.post('/login',passport.authenticate('local',{
+  //  successRedirect:"/principal",
+    //failureRedirect:"/",
+    //failureFlash:true
+//}));
 
 //estaticos
 app.use(express.static(path.join(__dirname,'public')));
