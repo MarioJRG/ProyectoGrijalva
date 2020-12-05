@@ -82,35 +82,35 @@ app.set('views',path.join(__dirname,'views'));
 
 //routes
 app.use('/',balanceRoutes);
-//app.get('/principal',(req,res,next)=>{
-  //  if(req.isAuthenticated()){
+app.get('/principal',(req,res,next)=>{
+    if(req.isAuthenticated()){
 
-    //    return next();
-    //}
-    //res.redirect('/');
-//}
-//,(req,res)=>{
-  //  Dieta.find({usuario:req.user._id},(err,dietas)=>{
-    //    if(err)console.log('Error: '+err)
-      //  res.render('principal',{
-        //    dieta:dietas
-        //});
+        return next();
+    }
+    res.redirect('/');
+}
+,(req,res)=>{
+    Dieta.find({usuario:req.user._id},(err,dietas)=>{
+        if(err)console.log('Error: '+err)
+        res.render('principal',{
+            dieta:dietas
+        });
         
-    //})
+    })
     //res.render('principal')
-//})
+})
 
-//app.get('/',(req,res,next) =>{
-//if(req.isAuthenticated()){
-  //  res.redirect('/principal');
-//}
-//res.render('inicio');
-//})  
-//app.post('/login',passport.authenticate('local',{
-  //  successRedirect:"/principal",
-    //failureRedirect:"/",
-    //failureFlash:true
-//}));
+app.get('/',(req,res,next) =>{
+if(req.isAuthenticated()){
+    res.redirect('/principal');
+}
+res.render('inicio');
+})  
+app.post('/login',passport.authenticate('local',{
+    successRedirect:"/principal",
+    failureRedirect:"/",
+    failureFlash:true
+}));
 
 //estaticos
 app.use(express.static(path.join(__dirname,'public')));
