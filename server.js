@@ -13,7 +13,7 @@ var login = require('./models/formulario.model');
 var  Dieta = require('./models/dieta.model');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 
 const db = require('./db');
