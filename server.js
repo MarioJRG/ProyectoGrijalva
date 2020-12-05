@@ -81,6 +81,7 @@ app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
 
 //routes
+app.use('/',balanceRoutes);
 app.get('/principal',(req,res,next)=>{
     if(req.isAuthenticated()){
 
@@ -110,7 +111,7 @@ app.post('/login',passport.authenticate('local',{
     failureRedirect:"/",
     failureFlash:true
 }));
-app.use('/',balanceRoutes);
+
 //estaticos
 app.use(express.static(path.join(__dirname,'public')));
 
